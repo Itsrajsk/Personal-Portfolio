@@ -5,7 +5,7 @@
   --color-background-secondary: #191919;
   --color-brand: #f0a500;
   --color-brand2: #ff7517;
-  --sidbar-width: 240px;
+  --sidebar-width: 240px;
   --font-base: "Poppins", sans-serif;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -55,7 +55,7 @@ img {
 }
 
 .bg-base {
-  background: var(--color-background-primary);
+  background-color: var(--color-background-primary);
 }
 
 .full-height {
@@ -109,7 +109,7 @@ img {
 @media (min-width: 992px) {
   .navbar {
     min-height: 100vh;
-    width: var(--sidbar-width);
+    width: var(--sidebar-width);
     background: linear-gradient(rgba(30, 32, 30, 0.9), rgba(30, 32, 30, 0.9)),
       url(../images/slidebar.jpg);
     background-size: cover;
@@ -121,11 +121,11 @@ img {
   }
 
   #content-wrapper {
-    padding-left: var(--sidbar-width);
+    padding-left: var(--sidebar-width);
   }
 }
 
-/* BTN */
+/* BUTTON STYLES */
 .btn {
   padding: var(--spacing-md) var(--spacing-lg);
   font-weight: 700;
@@ -162,6 +162,7 @@ img {
   width: 100%;
 }
 
+/* PROJECT STYLES */
 .project {
   position: relative;
 }
@@ -178,5 +179,58 @@ img {
 }
 
 .project:hover {
-  box-shadow: 0 0px 20px var(--color-brand);
+  box-shadow: 0 0 20px var(--color-brand);
+}
+
+/* CONTACT FORM */
+#contact .form-control {
+  background-color: lightgray;
+  color: var(--color-background-primary);
+}
+
+#contact .form-control:focus {
+  border: 3px solid var(--color-brand);
+  box-shadow: none;
+}
+
+#contact input.form-control {
+  height: 45px;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background-primary);
+  font-size: 24px;
+  border-radius: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar {
+    position: relative;
+    width: 100%;
+  }
+
+  #content-wrapper {
+    padding-left: 0;
+  }
+
+  .iconbox {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+  }
+
+  .full-height {
+    padding: 60px 0;
+  }
+
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
 }
